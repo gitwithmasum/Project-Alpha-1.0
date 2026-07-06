@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masum Billah</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <style>
+            :root{
+                --ink:#12151c;
+                --paper:#fbfaf7;
+                --gold:#b8863a;
+                --gold-soft:#e9d9b8;
+                --line:#e7e4dc;
+            }
+            
+            body{
+                background:var(--paper);
+                font-family:'Inter',sans-serif;
+                margin:0;
+            }
+            
+            .navbar{
+                background:var(--paper) !important;
+                border-bottom:1px solid var(--line);
+                padding:0.9rem 0;
+                box-shadow:none;
+                transition:box-shadow .3s ease;
+            }
+            .navbar.scrolled{
+                box-shadow:0 4px 20px rgba(18,21,28,0.06);
+            }
+            
+            .brand-wrap{
+                display:flex;
+                align-items:baseline;
+                gap:.5rem;
+            }
+            .brand-mark{
+                width:9px;
+                height:9px;
+                border-radius:2px;
+                background:var(--gold);
+                display:inline-block;
+                transform:rotate(45deg);
+                position:relative;
+                top:-2px;
+            }
+            .navbar-brand{
+                display:flex;
+                align-items:center;
+                gap:.55rem;
+            }
+            .navbar-brand span.name{
+                font-family:'Fraunces',serif;
+                font-weight:700;
+                font-size:1.35rem;
+                color:var(--ink);
+                letter-spacing:.2px;
+            }
+            .navbar-brand span.tag{
+                font-family:'Inter',sans-serif;
+                font-size:.68rem;
+                font-weight:600;
+                letter-spacing:.14em;
+                text-transform:uppercase;
+                color:var(--gold);
+                border-left:1px solid var(--line);
+                padding-left:.6rem;
+                margin-left:.1rem;
+            }
+            
+            .navbar-nav{
+                gap:.35rem;
+            }
+            .nav-link{
+                position:relative;
+                color:var(--ink) !important;
+                font-size:.82rem;
+                font-weight:600;
+                letter-spacing:.06em;
+                text-transform:uppercase;
+                padding:.55rem .9rem !important;
+                opacity:.75;
+                transition:opacity .2s ease;
+            }
+            .nav-link::after{
+                content:"";
+                position:absolute;
+                left:.9rem;
+                right:.9rem;
+                bottom:.35rem;
+                height:2px;
+                background:var(--gold);
+                transform:scaleX(0);
+                transform-origin:left;
+                transition:transform .25s ease;
+            }
+            .nav-link:hover{ opacity:1; }
+            .nav-link:hover::after{ transform:scaleX(1); }
+            .nav-item.active .nav-link{
+                opacity:1;
+            }
+            .nav-item.active .nav-link::after{
+                transform:scaleX(1);
+            }
+            
+            .navbar-toggler{
+                border:1px solid var(--line);
+                padding:.4rem .55rem;
+            }
+            .navbar-toggler:focus{ box-shadow:0 0 0 3px var(--gold-soft); }
+            .navbar-toggler-icon{
+                background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(18,21,28,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            }
+</style>
+</head>
+<body class="d-flex flex-column bg-dark  min-vh-100">
+<main>
+
+<!--Navigation-->
+<nav class="navbar shadow-sm sticky-top navbar-expand-lg navbar-light py-3" id="mainNav">
+  <div class="container px-5">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span class="name">Masum Billah</span>
+      <span class="tag">Portfolio</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="skill.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Header -->
+<header class="py-5">
+    <div class="container px-5 pb-5">
+        <div class="row gx-5 align-items-center">
+            <!-- Header Text -->
+            <div class="col-lg-6">
+                <div class="text-center text-lg-start p-5 rounded-4 shadow bg-white">
+
+                    <!-- Badge -->
+                    <span class="badge bg-secondary px-3 py-2 mb-3">
+                        Problem Solver • Web Developer • Aspiring ML Engineer
+                    </span>
+
+                    <!-- Greeting -->
+                    <h5 class="text-primary fw-semibold mt-3">
+                        Hello, I'm
+                    </h5>
+
+                    <!-- Name -->
+                    <h1 class="display-4 fw-bold">
+                        Masum Billah
+                    </h1>
+
+                    <!-- Role -->
+                    <h4 class="text-secondary mb-3">
+                        CSE | Programming Enthusiast
+                    </h4>
+
+                    <!-- Description -->
+                    <p class="lead text-muted">
+                        Passionate about Web Development, Artificial Intelligence,
+                        Machine Learning, and Data Science. I enjoy building
+                        practical projects, solving real-world problems, and
+                        continuously improving my technical skills.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="mt-4">
+                        <a href="#projects" class="btn btn-primary btn-lg me-3">
+                            View Projects
+                        </a>
+
+                        <a href="resume.html" class="btn btn-outline-primary btn-lg">
+                            Download Resume
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Header Image -->
+            <div class="col-lg-6">
+                <div class="text-center p-5 rounded-4 shadow bg-white">
+
+                    <img src="./assets/formal 1.0.png"
+                         class="profile-img img-fluid rounded-5 shadow-lg"
+                         alt="Masum Billah"
+                         width="330">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<!-- About Section -->
+<section class="bg-light py-5">
+    <div class="container px-5 card p-4 shadow">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                 <h2 class="display-5 fw-bold mb-3 text-center card p-2 shadow-sm bg-secondary text-white">
+                        About Me
+                    </h2>
+
+                <div class="text-center">
+                    <p class="lead">
+                        I am a passionate Computer Science and Engineering (CSE)
+                        student with a strong interest in Web Development,
+                        Machine Learning, Artificial Intelligence, and Data Science.
+                    </p>
+                </div>
+
+                <div class="d-flex justify-content-center gap-4 fs-3 mt-4">
+                        <a href="https://github.com/gitwithmasum" target="_blank">
+                            <i class="bi bi-github"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/masumtheinvincible/" target="_blank">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="mailto:masumtheinvincible@gmail.com">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+    <!-- Footer-->
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0">Copyright &copy; Your Website 2024</div></div>
+                <div class="col-auto">
+                    <a class="small" href="#!">Privacy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Terms</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./bootstrap.bundle.js"></script>
+
+</body>
+</html>
