@@ -1,111 +1,76 @@
-# Project-Alpha-1.0
-Personal portfolio website showcasing my projects, skills, and resume — built with HTML, CSS, and Bootstrap 5.
+# Masum Billah — Futuristic CSE Portfolio
 
-# Masum Billah — Portfolio Website
+A responsive personal portfolio for Masum Billah, a CSE student at BUBT focused on web development, artificial intelligence, machine learning, data science, and responsible research.
 
-A personal portfolio website built with HTML, CSS, and Bootstrap 5, showcasing my background, skills, and projects as a CSE student interested in Web Development, Machine Learning, AI, and Data Science.
+## Highlights
 
-🔗 **Live Site:** https://gitwithmasum.github.io/Project-Alpha-1.0/
+- Unified dark, futuristic design system across every page
+- Responsive navigation and layouts for mobile, tablet, and desktop
+- Real education and seven-month Genex customer-service experience
+- Technical and professional skill matrix
+- Web-development and research project showcase
+- Three downloadable computational pilot-study papers
+- Accessible semantics, reduced-motion support, and functional email composer
+- Static architecture with no build step required
 
----
+## Pages
 
-## 👋 About
+| Page | Purpose |
+| --- | --- |
+| `index.html` | Introduction, profile, capabilities, and research preview |
+| `resume.html` | Verified experience, education, focus areas, and skills |
+| `projects.html` | Selected web and research projects |
+| `research.html` | Research summaries, results, limitations, and PDF downloads |
+| `contact.html` | Direct contact channels and privacy-friendly email composer |
 
-I'm a Computer Science and Engineering (CSE) student and aspiring ML Engineer, passionate about building practical projects, solving real-world problems, and continuously improving my technical skills. This site is where I share my resume, projects, skills, and contact info.
+## Research portfolio
 
----
+1. **Explainable AI for Monthly Climate Stress Early Warning** — ROC-AUC 0.923, PR-AUC 0.821.
+2. **Machine Learning for Next-Day Extreme Rainfall Early Warning** — recall 78.1%, PR-AUC 0.348.
+3. **Carbon-Aware Machine Learning Model Selection** — 93.9% energy-proxy reduction at a 0.31 percentage-point accuracy cost.
 
-## ✨ Features
+These are completed computational pilot studies. They have not been peer reviewed or accepted by a journal or conference; each manuscript documents its data, method, results, and limitations.
 
-- Fully responsive design (mobile, tablet, desktop)
-- Sticky navigation bar with custom hover/active underline animation
-- Hero section with intro, role, and call-to-action buttons
-- About section with social/contact links
-- Dedicated pages for Resume, Projects, Research, and Contact
-- Downloadable AI, machine-learning, and climate research pilot studies
-- Built on Bootstrap 5 grid and components with custom styling on top
+## Technology
 
----
+- HTML5
+- CSS3
+- Bootstrap 5
+- Bootstrap Icons
+- Vanilla JavaScript
+- GitHub Pages-ready static hosting
 
-## 🛠️ Tech Stack
+## Structure
 
-| Category   | Tools Used |
-|------------|-----------|
-| Markup     | HTML5 |
-| Styling    | CSS3, [Bootstrap 5](https://getbootstrap.com/) |
-| Icons      | [Bootstrap Icons](https://icons.getbootstrap.com/) |
-| Fonts      | Fraunces (display), Inter (body) — via Google Fonts |
-| Scripting  | Bootstrap Bundle JS (for navbar toggle, collapse) |
-
----
-
-## 📁 Project Structure
-
-```
-├── index.html          # Home page
-├── resume.html         # Resume page
-├── projects.html       # Projects showcase
-├── research.html       # Research manuscripts and results
-├── contact.html        # Contact page
-├── research/           # Downloadable pilot-study PDFs
-├── css/
-│   ├── bootstrap.css   # Bootstrap framework styles
-│   └── style.css       # Custom site styles
+```text
+├── index.html
+├── resume.html
+├── projects.html
+├── research.html
+├── contact.html
+├── portfolio.css
+├── bootstrap.css
+├── bootstrap.bundle.js
 ├── assets/
-│   ├── favicon.ico
-│   └── formal-1.0.png  # Profile image
-└── bootstrap.bundle.js # Bootstrap JS bundle
+└── research/
+    ├── README.md
+    └── *.pdf
 ```
 
----
+## Run locally
 
-## 🚀 Getting Started
+```bash
+python -m http.server 8000
+```
 
-1. Clone or download this repository.
-2. Open `index.html` directly in your browser, or serve it locally:
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   ```
-3. Visit `http://localhost:8000` in your browser.
+Then open `http://localhost:8000`.
 
-No build tools or dependencies to install — this is a static site.
-
----
-
-## 📄 Pages
-
-| Page | Description |
-|------|-------------|
-| **Home** (`index.html`) | Landing page with intro, hero section, and about |
-| **Resume** (`resume.html`) | Downloadable/viewable resume |
-| **Projects** (`projects.html`) | Showcase of personal/academic projects |
-| **Research** (`research.html`) | Reproducible AI, ML, and climate pilot studies |
-| **Contact** (`contact.html`) | Contact form / details |
-
----
-
-## 📬 Connect With Me
+## Connect
 
 - GitHub: [@gitwithmasum](https://github.com/gitwithmasum)
 - LinkedIn: [masumtheinvincible](https://www.linkedin.com/in/masumtheinvincible/)
-- Email: masumtheinvincible@gmail.com
+- Email: [masumtheinvincible@gmail.com](mailto:masumtheinvincible@gmail.com)
 
----
+## License
 
-## 📌 To-Do / Known Issues
-
-- [ ] Load Google Fonts (Fraunces, Inter) referenced in custom CSS
-- [ ] Rename `assets/formal 1.0.png` to remove the space in the filename
-- [ ] Set the correct `active` nav-item consistently on every legacy page
-- [ ] Add a favicon check and confirm `assets/favicon.ico` exists
-
----
-
-## 📝 License
-
-This project is open for personal portfolio reference. Feel free to fork and adapt for your own portfolio — please don't copy the content verbatim.
-
----
-
-*Last updated: 2026*
+This project is available for personal portfolio reference. Please adapt the design and write original content rather than copying the portfolio verbatim.

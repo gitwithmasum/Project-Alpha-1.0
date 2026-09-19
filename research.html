@@ -1,196 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Research portfolio of Masum Billah featuring reproducible pilot studies in explainable AI, machine learning, climate risk, and carbon-aware computing.">
-    <title>Research | Masum Billah</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="./bootstrap.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        :root{
-            --ink:#eef6ff;
-            --muted:#aebed0;
-            --night:#07111f;
-            --panel:#0e1c2d;
-            --teal:#5eead4;
-            --gold:#e8bd73;
-            --line:rgba(255,255,255,.12);
-        }
-        html{scroll-behavior:smooth}
-        body{
-            margin:0;
-            color:var(--ink);
-            background:
-                radial-gradient(circle at 15% 10%, rgba(20,184,166,.15), transparent 28rem),
-                radial-gradient(circle at 88% 20%, rgba(184,134,58,.13), transparent 24rem),
-                var(--night);
-            font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
-        }
-        .navbar{
-            background:rgba(7,17,31,.9)!important;
-            border-bottom:1px solid var(--line);
-            backdrop-filter:blur(14px);
-        }
-        .brand-mark{
-            width:10px;height:10px;display:inline-block;background:var(--gold);
-            border-radius:2px;transform:rotate(45deg);margin-right:.65rem;
-        }
-        .navbar-brand,.nav-link{color:var(--ink)!important}
-        .navbar-brand{font-weight:800}
-        .nav-link{font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.72}
-        .nav-link:hover,.nav-link.active{opacity:1;color:var(--teal)!important}
-        .navbar-toggler{border-color:var(--line)}
-        .navbar-toggler-icon{filter:invert(1)}
-        .hero{padding:7rem 0 4rem}
-        .eyebrow{color:var(--teal);font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
-        .hero h1{font-size:clamp(2.7rem,7vw,5.8rem);line-height:.96;letter-spacing:-.055em;max-width:980px}
-        .hero-copy{color:var(--muted);font-size:1.12rem;line-height:1.8;max-width:760px}
-        .status-chip{
-            display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);
-            border-radius:999px;padding:.55rem .9rem;color:var(--muted);font-size:.82rem;
-        }
-        .status-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 14px var(--teal)}
-        .paper-card{
-            height:100%;padding:1.75rem;border:1px solid var(--line);border-radius:1.35rem;
-            background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
-            position:relative;overflow:hidden;transition:transform .25s ease,border-color .25s ease;
-        }
-        .paper-card::after{
-            content:"";position:absolute;inset:auto -20% -48% 30%;height:180px;
-            background:radial-gradient(circle,rgba(94,234,212,.12),transparent 68%);pointer-events:none;
-        }
-        .paper-card:hover{transform:translateY(-6px);border-color:rgba(94,234,212,.62)}
-        .paper-index{color:var(--teal);font-weight:800;font-size:2rem;line-height:1}
-        .paper-card h2{font-size:1.35rem;line-height:1.35;margin-top:1rem}
-        .paper-card p{color:var(--muted);line-height:1.7}
-        .metric-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin:1.25rem 0}
-        .metric{background:rgba(0,0,0,.22);border:1px solid var(--line);border-radius:.8rem;padding:.8rem}
-        .metric strong{display:block;color:var(--gold);font-size:1.15rem}
-        .metric span{color:var(--muted);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em}
-        .tag{
-            display:inline-block;border:1px solid rgba(94,234,212,.32);color:var(--teal);
-            border-radius:999px;padding:.32rem .65rem;font-size:.72rem;font-weight:700;margin:.2rem .22rem .2rem 0;
-        }
-        .btn-paper{background:var(--teal);border-color:var(--teal);color:#05201c;font-weight:800}
-        .btn-paper:hover{background:#99f6e4;border-color:#99f6e4;color:#05201c}
-        .btn-code{border-color:var(--line);color:var(--ink)}
-        .btn-code:hover{background:rgba(255,255,255,.08);color:var(--ink);border-color:rgba(255,255,255,.3)}
-        .integrity{
-            margin-top:4rem;padding:1.5rem;border-left:3px solid var(--gold);
-            background:rgba(232,189,115,.07);color:var(--muted);
-        }
-        footer{border-top:1px solid var(--line);color:var(--muted)}
-        @media(max-width:575.98px){.hero{padding-top:5rem}.paper-card{padding:1.25rem}.metric-grid{grid-template-columns:1fr}}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Research portfolio of Masum Billah featuring reproducible pilot studies in explainable AI, machine learning, climate risk, and carbon-aware computing.">
+  <title>Research | Masum Billah</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="./bootstrap.css">
+  <link rel="stylesheet" href="./portfolio.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top py-3">
-    <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="index.html"><span class="brand-mark"></span>Masum Billah <small class="text-white-50 fw-normal ms-2">Portfolio</small></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#researchNav" aria-controls="researchNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="researchNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="research.html">Research</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </div>
+<nav class="navbar site-nav navbar-expand-lg navbar-dark sticky-top py-3">
+  <div class="container px-4 px-lg-5">
+    <a class="navbar-brand d-flex align-items-center" href="index.html"><span class="brand-mark"></span><span>Masum Billah</span><span class="brand-label ms-3">CSE Portfolio</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="siteNav"><ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li><li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="research.html">Research</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul></div>
+  </div>
 </nav>
 
 <main>
-    <header class="hero">
-        <div class="container px-4 px-lg-5">
-            <div class="eyebrow mb-3">Research portfolio</div>
-            <h1 class="fw-bold mb-4">Machine intelligence for a changing climate.</h1>
-            <p class="hero-copy mb-4">
-                I am exploring explainable AI, climate-risk modelling, rare-event forecasting,
-                and energy-aware machine learning through reproducible student research.
-            </p>
-            <div class="status-chip"><span class="status-dot"></span>Three completed pilot studies · September 2026</div>
-        </div>
-    </header>
+  <header class="page-hero compact">
+    <div class="container px-4 px-lg-5">
+      <div class="eyebrow mb-3">Research / intelligence lab</div>
+      <h1 class="display-title mb-4">Machine intelligence for a <span class="accent">changing climate.</span></h1>
+      <p class="hero-copy mb-4">I explore explainable AI, climate-risk modelling, rare-event forecasting, and energy-aware machine learning through reproducible student research.</p>
+      <div class="status-chip"><span class="status-dot"></span>Three completed computational pilot studies · September 2026</div>
+    </div>
+  </header>
 
-    <section class="pb-5" aria-labelledby="papers-heading">
-        <div class="container px-4 px-lg-5">
-            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end gap-3 mb-4">
-                <div>
-                    <div class="eyebrow mb-2">Selected studies</div>
-                    <h2 class="h1 fw-bold mb-0" id="papers-heading">Research manuscripts</h2>
-                </div>
-                <p class="text-white-50 mb-0">Public data · Reproducible experiments · Transparent limitations</p>
-            </div>
+  <section class="section-space pt-2" aria-labelledby="papers-heading">
+    <div class="container px-4 px-lg-5">
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end gap-3 mb-5"><div><div class="eyebrow mb-2">Selected studies / 01</div><h2 class="section-heading mb-0" id="papers-heading">Research manuscripts</h2></div><p class="muted mb-0">Public data · Reproducible experiments · Transparent limitations</p></div>
+      <div class="row g-4">
+        <div class="col-lg-4"><article class="paper-card"><div class="card-number">01</div><h2 class="h4 fw-bold mt-3">Explainable AI for Monthly Climate Stress Early Warning</h2><p class="muted">A NASA POWER pilot across eight Bangladesh divisional cities with temporal validation and permutation-based explanations.</p><div class="metric-grid"><div class="metric"><strong>0.923</strong><span>ROC-AUC</span></div><div class="metric"><strong>0.821</strong><span>PR-AUC</span></div></div><div class="mb-4"><span class="tag">Explainable AI</span><span class="tag">Climate risk</span><span class="tag">Random Forest</span></div><a class="btn btn-primary-future" href="research/01_Explainable_AI_Climate_Stress_Pilot_Study.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf me-2"></i>Read PDF</a></article></div>
+        <div class="col-lg-4"><article class="paper-card"><div class="card-number">02</div><h2 class="h4 fw-bold mt-3">Machine Learning for Next-Day Extreme Rainfall</h2><p class="muted">A multi-city rare-event study using chronological testing and a rainfall-based flood-risk proxy.</p><div class="metric-grid"><div class="metric"><strong>78.1%</strong><span>Recall</span></div><div class="metric"><strong>0.348</strong><span>PR-AUC</span></div></div><div class="mb-4"><span class="tag">Machine learning</span><span class="tag">Rainfall</span><span class="tag">Early warning</span></div><a class="btn btn-primary-future" href="research/02_ML_Extreme_Rainfall_Early_Warning_Pilot_Study.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf me-2"></i>Read PDF</a></article></div>
+        <div class="col-lg-4"><article class="paper-card"><div class="card-number">03</div><h2 class="h4 fw-bold mt-3">Carbon-Aware Machine Learning Model Selection</h2><p class="muted">An accuracy-energy benchmark across three public datasets with an explicit carbon-aware decision rule.</p><div class="metric-grid"><div class="metric"><strong>93.9%</strong><span>Energy reduction</span></div><div class="metric"><strong>0.31 pp</strong><span>Accuracy cost</span></div></div><div class="mb-4"><span class="tag">Green AI</span><span class="tag">Efficiency</span><span class="tag">Benchmarking</span></div><a class="btn btn-primary-future" href="research/03_Carbon_Aware_AI_Model_Selection_Pilot_Study.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf me-2"></i>Read PDF</a></article></div>
+      </div>
+      <div class="integrity mt-5"><strong class="text-white">Research status.</strong> These are completed computational pilot studies and have not been peer reviewed or accepted by a journal or conference. Reported values come from the documented experiments; each paper states its data and measurement limitations.</div>
+    </div>
+  </section>
 
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <article class="paper-card">
-                        <div class="paper-index">01</div>
-                        <h2>Explainable AI for Monthly Climate Stress Early Warning</h2>
-                        <p>A NASA POWER pilot across eight Bangladesh divisional cities with temporal validation and permutation-based explanations.</p>
-                        <div class="metric-grid">
-                            <div class="metric"><strong>0.923</strong><span>ROC-AUC</span></div>
-                            <div class="metric"><strong>0.821</strong><span>PR-AUC</span></div>
-                        </div>
-                        <div class="mb-4"><span class="tag">Explainable AI</span><span class="tag">Climate risk</span><span class="tag">Random Forest</span></div>
-                        <a class="btn btn-paper" href="research/01_Explainable_AI_Climate_Stress_Pilot_Study.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf me-2"></i>Read PDF</a>
-                    </article>
-                </div>
-                <div class="col-lg-4">
-                    <article class="paper-card">
-                        <div class="paper-index">02</div>
-                        <h2>Machine Learning for Next Day Extreme Rainfall Early Warning</h2>
-                        <p>A multi-city rare-event study using chronological testing and a rainfall-based flood-risk proxy.</p>
-                        <div class="metric-grid">
-                            <div class="metric"><strong>78.1%</strong><span>Recall</span></div>
-                            <div class="metric"><strong>0.348</strong><span>PR-AUC</span></div>
-                        </div>
-                        <div class="mb-4"><span class="tag">Machine Learning</span><span class="tag">Rainfall</span><span class="tag">Early warning</span></div>
-                        <a class="btn btn-paper" href="research/02_ML_Extreme_Rainfall_Early_Warning_Pilot_Study.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf me-2"></i>Read PDF</a>
-                    </article>
-                </div>
-                <div class="col-lg-4">
-                    <article class="paper-card">
-                        <div class="paper-index">03</div>
-                        <h2>Carbon Aware Machine Learning Model Selection</h2>
-                        <p>An accuracy-energy benchmark across three public datasets with an explicit carbon-aware decision rule.</p>
-                        <div class="metric-grid">
-                            <div class="metric"><strong>93.9%</strong><span>Energy reduction</span></div>
-                            <div class="metric"><strong>0.31 pp</strong><span>Accuracy cost</span></div>
-                        </div>
-                        <div class="mb-4"><span class="tag">Green AI</span><span class="tag">Efficiency</span><span class="tag">Benchmarking</span></div>
-                        <a class="btn btn-paper" href="research/03_Carbon_Aware_AI_Model_Selection_Pilot_Study.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf me-2"></i>Read PDF</a>
-                    </article>
-                </div>
-            </div>
-
-            <div class="integrity rounded-3">
-                <strong class="text-white">Research status.</strong>
-                These are completed computational pilot studies and have not been peer reviewed or accepted by a journal or conference.
-                Reported values come from the documented experiments; the papers state their data and measurement limitations.
-            </div>
-
-            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 py-5">
-                <div>
-                    <h2 class="h4 fw-bold mb-1">Code and reproducibility</h2>
-                    <p class="text-white-50 mb-0">Experiment scripts, source data, derived features, result tables, and figures are maintained with the research package.</p>
-                </div>
-                <a class="btn btn-code btn-lg" href="https://github.com/gitwithmasum/Project-Alpha-1.0/tree/main/research" target="_blank" rel="noopener"><i class="bi bi-github me-2"></i>View research files</a>
-            </div>
-        </div>
-    </section>
+  <section class="section-space pt-2"><div class="container px-4 px-lg-5"><div class="cta-panel"><div class="row align-items-center g-4 position-relative" style="z-index:1"><div class="col-lg-8"><div class="eyebrow mb-2">Reproducibility / 02</div><h2 class="section-heading h1 mb-2">Follow the evidence.</h2><p class="section-copy mb-0">The research directory contains the downloadable manuscripts. Experiment methods, results, and limitations are documented in each paper.</p></div><div class="col-lg-4 text-lg-end"><a class="btn btn-outline-future" href="https://github.com/gitwithmasum/Project-Alpha-1.0/tree/main/research" target="_blank" rel="noopener"><i class="bi bi-github me-2"></i>Research files</a></div></div></div></div></section>
 </main>
 
-<footer class="py-4">
-    <div class="container px-4 px-lg-5 d-flex flex-column flex-sm-row justify-content-between gap-2">
-        <span>Copyright &copy; Masum Billah 2026</span>
-        <a class="text-decoration-none text-white-50" href="mailto:masumtheinvincible@gmail.com">masumtheinvincible@gmail.com</a>
-    </div>
-</footer>
-
+<footer class="site-footer py-4 mt-5"><div class="container px-4 px-lg-5 d-flex flex-column flex-sm-row justify-content-between gap-2"><span>&copy; 2026 Masum Billah</span><a class="text-decoration-none muted" href="mailto:masumtheinvincible@gmail.com">masumtheinvincible@gmail.com</a></div></footer>
 <script src="./bootstrap.bundle.js"></script>
 </body>
 </html>

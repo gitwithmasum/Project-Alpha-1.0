@@ -1,179 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masum Billah</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
-    <link rel="stylesheet" href="./bootstrap.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-    <style>
-            :root{
-                --ink:#12151c;
-                --paper:#fbfaf7;
-                --gold:#b8863a;
-                --gold-soft:#e9d9b8;
-                --line:#e7e4dc;
-            }
-            
-            body{
-                background:var(--paper);
-                font-family:'Inter',sans-serif;
-                margin:0;
-            }
-            
-            .navbar{
-                background:var(--paper) !important;
-                border-bottom:1px solid var(--line);
-                padding:0.9rem 0;
-                box-shadow:none;
-                transition:box-shadow .3s ease;
-            }
-            .navbar.scrolled{
-                box-shadow:0 4px 20px rgba(18,21,28,0.06);
-            }
-            
-            .brand-wrap{
-                display:flex;
-                align-items:baseline;
-                gap:.5rem;
-            }
-            .brand-mark{
-                width:9px;
-                height:9px;
-                border-radius:2px;
-                background:var(--gold);
-                display:inline-block;
-                transform:rotate(45deg);
-                position:relative;
-                top:-2px;
-            }
-            .navbar-brand{
-                display:flex;
-                align-items:center;
-                gap:.55rem;
-            }
-            .navbar-brand span.name{
-                font-family:'Fraunces',serif;
-                font-weight:700;
-                font-size:1.35rem;
-                color:var(--ink);
-                letter-spacing:.2px;
-            }
-            .navbar-brand span.tag{
-                font-family:'Inter',sans-serif;
-                font-size:.68rem;
-                font-weight:600;
-                letter-spacing:.14em;
-                text-transform:uppercase;
-                color:var(--gold);
-                border-left:1px solid var(--line);
-                padding-left:.6rem;
-                margin-left:.1rem;
-            }
-            
-            .navbar-nav{
-                gap:.35rem;
-            }
-            .nav-link{
-                position:relative;
-                color:var(--ink) !important;
-                font-size:.82rem;
-                font-weight:600;
-                letter-spacing:.06em;
-                text-transform:uppercase;
-                padding:.55rem .9rem !important;
-                opacity:.75;
-                transition:opacity .2s ease;
-            }
-            .nav-link::after{
-                content:"";
-                position:absolute;
-                left:.9rem;
-                right:.9rem;
-                bottom:.35rem;
-                height:2px;
-                background:var(--gold);
-                transform:scaleX(0);
-                transform-origin:left;
-                transition:transform .25s ease;
-            }
-            .nav-link:hover{ opacity:1; }
-            .nav-link:hover::after{ transform:scaleX(1); }
-            .nav-item.active .nav-link{
-                opacity:1;
-            }
-            .nav-item.active .nav-link::after{
-                transform:scaleX(1);
-            }
-            
-            .navbar-toggler{
-                border:1px solid var(--line);
-                padding:.4rem .55rem;
-            }
-            .navbar-toggler:focus{ box-shadow:0 0 0 3px var(--gold-soft); }
-            .navbar-toggler-icon{
-                background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(18,21,28,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-            }
-
-            .research-preview{
-                background:
-                    radial-gradient(circle at 10% 20%, rgba(20,184,166,.16), transparent 34%),
-                    radial-gradient(circle at 92% 12%, rgba(184,134,58,.16), transparent 30%),
-                    #0b1320;
-                color:#eef6ff;
-            }
-            .research-kicker{
-                color:#5eead4;
-                font-size:.78rem;
-                font-weight:700;
-                letter-spacing:.16em;
-                text-transform:uppercase;
-            }
-            .research-card{
-                height:100%;
-                background:rgba(255,255,255,.06);
-                border:1px solid rgba(255,255,255,.12);
-                border-radius:1.25rem;
-                padding:1.5rem;
-                transition:transform .25s ease,border-color .25s ease;
-            }
-            .research-card:hover{
-                transform:translateY(-5px);
-                border-color:rgba(94,234,212,.7);
-            }
-            .research-number{
-                color:#5eead4;
-                font-size:1.85rem;
-                font-weight:800;
-                line-height:1;
-            }
-            .research-card p{ color:#b9c8d8; }
-            .research-metric{
-                display:inline-block;
-                color:#f8ddb0;
-                font-weight:700;
-                margin-top:.5rem;
-            }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Masum Billah, a CSE student, web developer, and aspiring AI and machine learning researcher.">
+  <title>Masum Billah | CSE, Web & AI</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="./bootstrap.css">
+  <link rel="stylesheet" href="./portfolio.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-<body class="d-flex flex-column bg-dark  min-vh-100">
-<main>
-
-<!--Navigation-->
-<nav class="navbar shadow-sm sticky-top navbar-expand-lg navbar-light py-3" id="mainNav">
-  <div class="container px-5">
-    <a class="navbar-brand" href="index.html">
-      <span class="brand-mark"></span>
-      <span class="name">Masum Billah</span>
-      <span class="tag">Portfolio</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<body>
+<nav class="navbar site-nav navbar-expand-lg navbar-dark sticky-top py-3">
+  <div class="container px-4 px-lg-5">
+    <a class="navbar-brand d-flex align-items-center" href="index.html"><span class="brand-mark"></span><span>Masum Billah</span><span class="brand-label ms-3">CSE Portfolio</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="siteNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
@@ -183,173 +27,114 @@
   </div>
 </nav>
 
-
-<!-- Header -->
-<header class="py-5">
-    <div class="container px-5 pb-5">
-        <div class="row gx-5 align-items-center">
-            <!-- Header Text -->
-            <div class="col-lg-6">
-                <div class="text-center text-lg-start p-5 rounded-4 shadow bg-white">
-
-                    <!-- Badge -->
-                    <span class="badge bg-secondary px-3 py-2 mb-3">
-                        Problem Solver • Web Developer • Aspiring ML Engineer
-                    </span>
-
-                    <!-- Greeting -->
-                    <h5 class="text-primary fw-semibold mt-3">
-                        Hello, I'm
-                    </h5>
-
-                    <!-- Name -->
-                    <h1 class="display-4 fw-bold">
-                        Masum Billah
-                    </h1>
-
-                    <!-- Role -->
-                    <h4 class="text-secondary mb-3">
-                        CSE | Programming Enthusiast
-                    </h4>
-
-                    <!-- Description -->
-                    <p class="lead text-muted">
-                        Passionate about Web Development, Artificial Intelligence,
-                        Machine Learning, and Data Science. I enjoy building
-                        practical projects, solving real-world problems, and
-                        continuously improving my technical skills.
-                    </p>
-
-                    <!-- Buttons -->
-                    <div class="mt-4">
-                        <a href="projects.html" class="btn btn-primary btn-lg me-3">
-                            View Projects
-                        </a>
-
-                        <a href="resume.html" class="btn btn-outline-primary btn-lg">
-                            Download Resume
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Header Image -->
-            <div class="col-lg-6">
-                <div class="text-center p-5 rounded-4 shadow bg-white">
-
-                    <img src="./assets/formal 1.0.png"
-                         class="profile-img img-fluid rounded-5 shadow-lg"
-                         alt="Masum Billah"
-                         width="330">
-
-                </div>
-            </div>
-
+<main>
+  <header class="page-hero">
+    <div class="container px-4 px-lg-5">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-7">
+          <div class="eyebrow mb-3">CSE student · Web developer · AI explorer</div>
+          <h1 class="display-title mb-4">Building useful systems for a <span class="accent">smarter future.</span></h1>
+          <p class="hero-copy mb-4">I’m Masum Billah, a Computer Science and Engineering student at BUBT. I build responsive web experiences and explore explainable AI, machine learning, data science, and climate-focused computing.</p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a class="btn btn-primary-future" href="projects.html"><i class="bi bi-grid-1x2-fill me-2"></i>Explore projects</a>
+            <a class="btn btn-outline-future" href="research.html"><i class="bi bi-journal-richtext me-2"></i>Read research</a>
+          </div>
+          <div class="status-chip"><span class="status-dot"></span>Open to internships, junior roles and collaborations</div>
         </div>
+        <div class="col-lg-5">
+          <div class="profile-frame glass-card">
+            <img src="assets/formal 1.0.png" alt="Portrait of Masum Billah">
+            <div class="profile-label"><strong>Masum Billah</strong><div class="muted small">Problem solver in progress · Dhaka, Bangladesh</div></div>
+          </div>
+        </div>
+      </div>
     </div>
-</header>
+  </header>
 
-<!-- About Section -->
-<section class="bg-light py-5">
-    <div class="container px-5 card p-4 shadow">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                 <h2 class="display-5 fw-bold mb-3 text-center card p-2 shadow-sm bg-secondary text-white">
-                        About Me
-                    </h2>
-
-                <div class="text-center">
-                    <p class="lead">
-                        I am a passionate Computer Science and Engineering (CSE)
-                        student with a strong interest in Web Development,
-                        Machine Learning, Artificial Intelligence, and Data Science.
-                    </p>
-                </div>
-
-                <div class="d-flex justify-content-center gap-4 fs-3 mt-4">
-                        <a href="https://github.com/gitwithmasum" target="_blank">
-                            <i class="bi bi-github"></i>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/masumtheinvincible/" target="_blank">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-
-                        <a href="mailto:masumtheinvincible@gmail.com">
-                            <i class="bi bi-envelope-fill"></i>
-                        </a>
-                </div>
-
-            </div>
-        </div>
+  <section class="section-space pt-2" aria-labelledby="signal-heading">
+    <div class="container px-4 px-lg-5">
+      <h2 class="visually-hidden" id="signal-heading">Profile highlights</h2>
+      <div class="row g-3">
+        <div class="col-6 col-lg-3"><div class="stat"><strong>03</strong><span>Research studies</span></div></div>
+        <div class="col-6 col-lg-3"><div class="stat"><strong>07 mo.</strong><span>Customer experience</span></div></div>
+        <div class="col-6 col-lg-3"><div class="stat"><strong>Full stack</strong><span>Current learning path</span></div></div>
+        <div class="col-6 col-lg-3"><div class="stat"><strong>AI + ML</strong><span>Research direction</span></div></div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Research Preview -->
-<section class="research-preview py-5" id="research">
-    <div class="container px-5 py-4">
-        <div class="row align-items-end mb-4">
-            <div class="col-lg-8">
-                <div class="research-kicker mb-2">Reproducible research</div>
-                <h2 class="display-5 fw-bold mb-3">AI and climate pilot studies</h2>
-                <p class="lead mb-0 text-white-50">
-                    Three completed computational studies using public datasets, temporal validation,
-                    transparent limitations, and downloadable manuscripts.
-                </p>
-            </div>
-            <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                <a href="research.html" class="btn btn-outline-light btn-lg">Explore all research</a>
-            </div>
+  <section class="section-space" id="about" aria-labelledby="about-heading">
+    <div class="container px-4 px-lg-5">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6">
+          <div class="eyebrow mb-2">About / 01</div>
+          <h2 class="section-heading mb-4" id="about-heading">Curiosity translated into code and research.</h2>
+          <p class="section-copy">My work sits at the intersection of software engineering and intelligent systems. I enjoy turning ideas into responsive products, studying real datasets, and documenting results honestly—including limitations.</p>
+          <p class="section-copy">Alongside technical work, seven months in customer service at Genex strengthened my communication, teamwork, patience, and ability to solve problems under pressure.</p>
+          <div class="d-flex gap-2 mt-4">
+            <a class="social-link" href="https://github.com/gitwithmasum" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a class="social-link" href="https://www.linkedin.com/in/masumtheinvincible/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a class="social-link" href="mailto:masumtheinvincible@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+          </div>
         </div>
-
-        <div class="row g-4">
-            <div class="col-md-6 col-xl-4">
-                <article class="research-card">
-                    <div class="research-number">01</div>
-                    <h3 class="h5 mt-3">Explainable AI for Climate Stress</h3>
-                    <p>Monthly early warning across eight Bangladesh divisional cities using NASA POWER data.</p>
-                    <span class="research-metric">ROC-AUC 0.923</span>
-                </article>
-            </div>
-            <div class="col-md-6 col-xl-4">
-                <article class="research-card">
-                    <div class="research-number">02</div>
-                    <h3 class="h5 mt-3">Extreme Rainfall Early Warning</h3>
-                    <p>A next-day rainfall-risk pilot with rare-event evaluation and a future-year test split.</p>
-                    <span class="research-metric">Recall 78.1%</span>
-                </article>
-            </div>
-            <div class="col-md-6 col-xl-4">
-                <article class="research-card">
-                    <div class="research-number">03</div>
-                    <h3 class="h5 mt-3">Carbon-Aware AI Selection</h3>
-                    <p>Accuracy-energy trade-offs across three public machine-learning benchmarks.</p>
-                    <span class="research-metric">Energy proxy -93.9%</span>
-                </article>
-            </div>
+        <div class="col-lg-6">
+          <div class="terminal">
+            <div class="terminal-top"><span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span></div>
+            <div class="terminal-line"><span class="prompt">masum@portfolio:~$</span> profile --summary</div>
+            <div class="terminal-line">education: <span class="value">BSc in CSE · BUBT</span></div>
+            <div class="terminal-line">building: <span class="value">responsive web applications</span></div>
+            <div class="terminal-line">exploring: <span class="value">AI · ML · data science</span></div>
+            <div class="terminal-line">research: <span class="value">climate risk · Green AI</span></div>
+            <div class="terminal-line">mission: <span class="value">learn deeply, build responsibly</span></div>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
+
+  <section class="section-space" aria-labelledby="capabilities-heading">
+    <div class="container px-4 px-lg-5">
+      <div class="eyebrow mb-2">Capabilities / 02</div>
+      <h2 class="section-heading mb-5" id="capabilities-heading">A growing toolkit for real-world problems.</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-3"><article class="feature-card"><span class="card-icon mb-4"><i class="bi bi-window"></i></span><h3 class="h5 fw-bold">Web development</h3><p class="muted mb-0">Responsive interfaces using HTML, CSS, Bootstrap and JavaScript, with full-stack development as my current path.</p></article></div>
+        <div class="col-md-6 col-xl-3"><article class="feature-card"><span class="card-icon mb-4"><i class="bi bi-cpu"></i></span><h3 class="h5 fw-bold">AI & machine learning</h3><p class="muted mb-0">Supervised learning, evaluation, explainability and responsible experimentation with public datasets.</p></article></div>
+        <div class="col-md-6 col-xl-3"><article class="feature-card"><span class="card-icon mb-4"><i class="bi bi-bar-chart-line"></i></span><h3 class="h5 fw-bold">Data & research</h3><p class="muted mb-0">Data preparation, statistical thinking, reproducible analysis and clear reporting of evidence and limitations.</p></article></div>
+        <div class="col-md-6 col-xl-3"><article class="feature-card"><span class="card-icon mb-4"><i class="bi bi-headset"></i></span><h3 class="h5 fw-bold">Support & teamwork</h3><p class="muted mb-0">Customer service, IT support, Microsoft Office, communication and night-shift operations experience.</p></article></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space" aria-labelledby="research-heading">
+    <div class="container px-4 px-lg-5">
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end gap-3 mb-4">
+        <div><div class="eyebrow mb-2">Research / 03</div><h2 class="section-heading mb-0" id="research-heading">Evidence before hype.</h2></div>
+        <a class="btn btn-outline-future" href="research.html">View all papers <i class="bi bi-arrow-right ms-2"></i></a>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4"><article class="paper-card"><div class="card-number">01</div><h3 class="h5 fw-bold mt-3">Explainable AI for Climate Stress</h3><p class="muted">Early-warning modelling across eight Bangladesh divisional cities.</p><span class="tag">ROC-AUC 0.923</span></article></div>
+        <div class="col-lg-4"><article class="paper-card"><div class="card-number">02</div><h3 class="h5 fw-bold mt-3">Extreme Rainfall Early Warning</h3><p class="muted">Chronological rare-event testing with a rainfall-risk proxy.</p><span class="tag">Recall 78.1%</span></article></div>
+        <div class="col-lg-4"><article class="paper-card"><div class="card-number">03</div><h3 class="h5 fw-bold mt-3">Carbon-Aware Model Selection</h3><p class="muted">Choosing efficient models with explicit accuracy-energy trade-offs.</p><span class="tag">Energy −93.9%</span></article></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space pt-2">
+    <div class="container px-4 px-lg-5">
+      <div class="cta-panel">
+        <div class="eyebrow mb-2">Next signal</div>
+        <div class="row align-items-end g-4 position-relative" style="z-index:1">
+          <div class="col-lg-8"><h2 class="section-heading mb-2">Let’s build something meaningful.</h2><p class="section-copy mb-0">Have an internship, junior opportunity, project or research idea? I would like to hear about it.</p></div>
+          <div class="col-lg-4 text-lg-end"><a class="btn btn-primary-future" href="contact.html">Start a conversation</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
-    <!-- Footer-->
-    <footer class="bg-white py-4 mt-auto">
-        <div class="container px-5">
-            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                <div class="col-auto"><div class="small m-0">Copyright &copy; Masum Billah 2026</div></div>
-                <div class="col-auto">
-                    <a class="small" href="#!">Privacy</a>
-                    <span class="mx-1">&middot;</span>
-                    <a class="small" href="#!">Terms</a>
-                    <span class="mx-1">&middot;</span>
-                    <a class="small" href="#!">Contact</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="./bootstrap.bundle.js"></script>
-
+<footer class="site-footer py-4 mt-5">
+  <div class="container px-4 px-lg-5 d-flex flex-column flex-sm-row justify-content-between gap-2"><span>&copy; 2026 Masum Billah</span><span>Designed for clarity · Built for growth</span></div>
+</footer>
+<script src="./bootstrap.bundle.js"></script>
 </body>
 </html>
