@@ -11,12 +11,18 @@ A responsive personal portfolio for **Masum Billah**, a CSE student at BUBT focu
 - Verified education and seven-month Genex customer-service experience
 - Three downloadable computational pilot-study manuscripts
 - Accessible navigation, reduced-motion support, and a privacy-friendly email composer
+- SEO metadata, JSON-LD, sitemap, robots rules, and a custom 404 page
+- Optimized WebP portrait for faster loading
 - Static architecture with no build step required
 
 ## Project structure
 
 ```text
-├── index.html                  # Landing page required by GitHub Pages
+├── index.html                  # GitHub Pages landing page
+├── 404.html                    # Custom not-found page
+├── robots.txt
+├── sitemap.xml
+├── .nojekyll
 ├── README.md
 ├── LICENSE
 ├── assets/
@@ -27,16 +33,13 @@ A responsive personal portfolio for **Masum Billah**, a CSE student at BUBT focu
 │   │   └── bootstrap.bundle.js
 │   └── images/
 │       ├── favicon.ico
-│       ├── formal-1.0.png
-│       ├── gamma.jpg
-│       ├── profile.png
-│       └── profile-back.svg
+│       ├── formal-portrait.webp
+│       └── gamma.jpg
 ├── pages/
 │   ├── resume.html
 │   ├── projects.html
 │   ├── research.html
-│   ├── contact.html
-│   └── loader.html
+│   └── contact.html
 └── research/
     ├── README.md
     └── papers/

@@ -245,3 +245,26 @@ img { max-width: 100%; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
+
+
+/* Accessibility and interaction polish */
+::selection { color: #031311; background: var(--teal); }
+.skip-link {
+  position: fixed;
+  z-index: 2000;
+  top: -5rem;
+  left: 1rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--teal);
+  border-radius: 0.7rem;
+  color: #03211d;
+  background: var(--teal);
+  font-weight: 800;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-link:focus { top: 1rem; color: #03211d; }
+:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 4px;
+}
