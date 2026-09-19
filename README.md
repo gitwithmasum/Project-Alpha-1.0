@@ -5,7 +5,7 @@ Personal portfolio website showcasing my projects, skills, and resume — built 
 
 A personal portfolio website built with HTML, CSS, and Bootstrap 5, showcasing my background, skills, and projects as a CSE student interested in Web Development, Machine Learning, AI, and Data Science.
 
-🔗 **Live Site:** _add your deployed link here_
+🔗 **Live Site:** https://gitwithmasum.github.io/Project-Alpha-1.0/
 
 ---
 
@@ -21,7 +21,8 @@ I'm a Computer Science and Engineering (CSE) student and aspiring ML Engineer, p
 - Sticky navigation bar with custom hover/active underline animation
 - Hero section with intro, role, and call-to-action buttons
 - About section with social/contact links
-- Dedicated pages for Resume, Projects, Skills, and Contact
+- Dedicated pages for Resume, Projects, Research, and Contact
+- Downloadable AI, machine-learning, and climate research pilot studies
 - Built on Bootstrap 5 grid and components with custom styling on top
 
 ---
@@ -44,8 +45,9 @@ I'm a Computer Science and Engineering (CSE) student and aspiring ML Engineer, p
 ├── index.html          # Home page
 ├── resume.html         # Resume page
 ├── projects.html       # Projects showcase
-├── skill.html          # Skills page
+├── research.html       # Research manuscripts and results
 ├── contact.html        # Contact page
+├── research/           # Downloadable pilot-study PDFs
 ├── css/
 │   ├── bootstrap.css   # Bootstrap framework styles
 │   └── style.css       # Custom site styles
@@ -78,7 +80,7 @@ No build tools or dependencies to install — this is a static site.
 | **Home** (`index.html`) | Landing page with intro, hero section, and about |
 | **Resume** (`resume.html`) | Downloadable/viewable resume |
 | **Projects** (`projects.html`) | Showcase of personal/academic projects |
-| **Skills** (`skill.html`) | Technical skills and tools |
+| **Research** (`research.html`) | Reproducible AI, ML, and climate pilot studies |
 | **Contact** (`contact.html`) | Contact form / details |
 
 ---
@@ -93,10 +95,9 @@ No build tools or dependencies to install — this is a static site.
 
 ## 📌 To-Do / Known Issues
 
-- [ ] Remove duplicate Bootstrap CSS import (`css/bootstrap.css` vs `./bootstrap.css`)
 - [ ] Load Google Fonts (Fraunces, Inter) referenced in custom CSS
 - [ ] Rename `assets/formal 1.0.png` to remove the space in the filename
-- [ ] Set the correct `active` nav-item per page instead of hardcoding "Home"
+- [ ] Set the correct `active` nav-item consistently on every legacy page
 - [ ] Add a favicon check and confirm `assets/favicon.ico` exists
 
 ---
